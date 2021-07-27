@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "webpack-dev-server --history-api-fallback --inline --open",
     "build": "npm run clear -s && webpack --progress",
-    "lint": "eslint ./**/*.js",
+    "lint": "eslint --ext .js,.ts src",
     "clear": "del-cli dist",
     "dev-web": "webpack-dev-server --config webpack/webpack.dev.config.js --progress"
   },
@@ -23,6 +23,7 @@
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "@types/lodash": "^4.14.168",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.0.5",
@@ -30,11 +31,13 @@
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "del-cli": "^3.0.1",
+    "dotenv-webpack": "^7.0.2",
     "eslint": "^6.6.0",
     "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-airbnb-typescript": "^12.3.1",
     "eslint-config-prettier": "^6.5.0",
     "eslint-loader": "^3.0.2",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-import": "^2.23.3",
     "file-loader": "^4.2.0",
     "gulp-uglify-es": "^2.0.0",
     "html-loader": "^0.5.5",
@@ -56,6 +59,7 @@
   "dependencies": {
     "core-js": "^3.4.7",
     "loader-utils": "^2.0.0",
-    "regenerator-runtime": "^0.13.3"
+    "regenerator-runtime": "^0.13.3",
+    "uuid": "^8.3.2"
   }
 }
